@@ -2,8 +2,9 @@
 created by me, view the post you are taged on 
    note-: 1-no middleware is created as no authentication was required 
           2- user data has been handled through userId, which is taken in body,
-          3- all the body data is of raw type      */
-
+          3- all the body data is of raw type      
+          4- only few apis were required so no saperate route or controller is needed*/
+        
 const express = require('express');
 const app = express();
 const { UserModel } = require("./model/user");
