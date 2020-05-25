@@ -67,7 +67,6 @@ app.post('/post', async(req,res)=>{
             } else {
             if(userList)
             obj = JSON.parse(userList);
-            console.log("userList",userList)
                 if(!userList.includes(req.body.userName) && !userList.includes('@'+req.body.userName)){
                     res.status(403).json({error:"Inavalid user!"});
                     return
@@ -131,7 +130,6 @@ app.post('/searchUser', async(req,res)=>{
         } else {
         if(userList)
         obj = JSON.parse(userList);
-        console.log("userList",userList)
             if(userList.includes(search) || userList.includes("@"+search)){
                 res.status(200).json({response:{name:search}});
                 return
@@ -161,7 +159,6 @@ app.post('/myTweet', async(req,res)=>{
         } else {
         if(userList)
         obj = JSON.parse(userList);
-        console.log("userList",userList)
             if(!obj.includes(req.body.userName) && !obj.includes("@"+req.body.userName)){
                 res.status(403).json({error:"Invalid user!"});
                 return
@@ -201,7 +198,6 @@ app.post('/myMentions', async(req,res)=>{
             } else {
             if(userList)
             obj = JSON.parse(userList);
-            console.log("userList",userList)
                 if(!userList.includes(req.body.userName) && userList.includes("@"+req.body.userName)){
                     res.status(403).json({error:"Inavalid user!"});
                     return
